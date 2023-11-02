@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>properties enumeration</title>
+</head>
+<body>
+    
+    <script>
+        const employee = {
+            name: "John",
+            surname: "Black",
+            age: 33,
+            gender: "male",
+            position: "guard",
+            getEmployee: function() {
+                console.log("Employee");
+                console.log("--------");
+                for (let prop in employee) {
+                    if (employee.hasOwnProperty(prop)) {
+                    console.log(prop, employee[prop]);
+                    }
+                }
+            }
+        }
+
+        employee.getEmployee();
+    </script>
+</body>
+</html>
